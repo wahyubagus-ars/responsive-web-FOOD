@@ -10,23 +10,25 @@
   <!-- Navigation -->
   <header>
     <a href="" class="logo">Food<span>.</span></a>
+    <div class="menuToggle" onclick="menuToggle()"></div>
     <ul class="navigation">
-      <li><a href="#banner">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#expert">Expert</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#banner" onclick="menuToggle()">Home</a></li>
+      <li><a href="#about" onclick="menuToggle()">About</a></li>
+      <li><a href="#menu" onclick="menuToggle()">Menu</a></li>
+      <li><a href="#expert" onclick="menuToggle()">Expert</a></li>
+      <li><a href="#testimonials" onclick="menuToggle()">Testimonials</a></li>
+      <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
     </ul>
   </header>
 
   <!-- Banner -->
   <section class="banner" id="banner">
     <div class="content">
-      <h2>Always Choose Good</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo aut et dolore id cum tempore. 
-        Ullam sapiente amet quibusdam repellendus quia velit ea quaerat odit voluptatum, eos, fuga cum. Illo.</p>
-        <a href="#" class="btn">Our Menu</a>
+        <h2>Always Choose Good</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo aut et dolore
+           id cum tempore. Ullam sapiente amet quibusdam repellendus quia velit ea quaerat 
+           odit voluptatum, eos, fuga cum. Illo.</p>
+          <a href="#" class="btn">Our Menu</a>
     </div>
   </section>
 
@@ -235,6 +237,14 @@
       const header = document.querySelector('header')
       header.classList.toggle('sticky', window.scrollY > 0)
     })
+
+    function menuToggle(){
+      const menuToggle = document.querySelector('.menuToggle')
+      const navigation = document.querySelector('.navigation')
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+      // console.log(menuToggle);
+    }
   </script>
 </body>
 </html>
